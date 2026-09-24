@@ -1,4 +1,4 @@
-# Phage Synergy Explorer <img align="right" width="190" height="60" src="https://lbbe-intra.univ-lyon1.fr/organigrammes/"> <img align="right" width="190" height="60" src="https://www.google.com/imgres?q=CIRI%20lyon&imgurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2Fv2%2FC4D0BAQGve9gjM89zjA%2Fcompany-logo_200_200%2Fcompany-logo_200_200%2F0%2F1630559066145%3Fe%3D2147483647%26v%3Dbeta%26t%3DYf9nbRYeRi6VcQFMD-c2x2Naowh3htJ1W-aBuoONcP0&imgrefurl=https%3A%2F%2Ffr.linkedin.com%2Fcompany%2Fciri-lyon&docid=DaIU5DMGRftuuM&tbnid=oLRbAXCISv3AwM&vet=12ahUKEwi2sP-c0IaXAxVq_rsIHVx9AjgQnPAOegQIOxAA..i&w=200&h=200&hcb=2&ved=2ahUKEwi2sP-c0IaXAxVq_rsIHVx9AjgQnPAOegQIOxAA">
+# Phage Synergy Explorer <img align="right" width="190" height="60" src=""> <img align="right" width="190" height="60" src="">
 
 An interactive front end to a Bayesian Bliss model of phage-phage interaction.
 It takes either a single phage pair typed by hand or a full screening table, and it is deliberately agnostic about the naming, layout and size of that table.
@@ -82,7 +82,7 @@ The app fits `bliss_zhao_n`, the replicate-level Bliss model generalised to $n_p
 - Single-phage effects are modelled on the probability scale through a logit-normal hierarchy:
 
 $$
-\operatorname{logit}(p_{k,b}) \sim \mathcal{N}(0, 0.16)
+logit(p_{k,b}) \sim \mathcal{N}(0, 0.16)
 $$
 
 - The Bliss expected effect is the complement of the survival product:
@@ -97,7 +97,7 @@ which for $n_p = 2$ is the familiar $p_{1,b} + p_{2,b} - p_{1,b}p_{2,b}$.
 
 $$
 \delta_b \sim \mathcal{N}(0, \tau_{\delta}), \quad
-\operatorname{logit}(p_{c,b}) = \operatorname{logit}(\mu_b) + \delta_b
+logit(p_{c,b}) = logit(\mu_b) + \delta_b
 $$
 
 - The interaction effect reported by the model is:
@@ -135,7 +135,7 @@ The Bayes factor divides the posterior odds of a relevant synergy by the prior o
 ### Why These Modeling Choices
 
 - Bliss baseline:
-  Bliss independence ($\mu_b = 1 - \prod_k (1 - p_{k,b})$) is a standard null model for non-interacting agents. It provides a biologically interpretable reference to classify synergy or antagonism.
+  Bliss independence ( $\mu_b = 1 - \prod_k (1 - p_{k,b})$ ) is a standard null model for non-interacting agents. It provides a biologically interpretable reference to classify synergy or antagonism.
 
 - Logit parameterization for means:
   Modeling latent means on the logit scale keeps probabilities in $(0,1)$ after inverse-logit transformation and gives stable inference near boundaries.
@@ -155,5 +155,5 @@ The Bayes factor divides the posterior odds of a relevant synergy by the prior o
 - Weakly informative priors:
   Priors are broad enough to let data dominate but still constrain implausible parameter values, which is useful for finite replicate counts and improves MCMC stability.
 
-- Direct effect metric ($\mathrm{synergy}_b = p_{c,b} - \mu_b$):
+- Direct effect metric ( $\mathrm{synergy}_b = p_{c,b} - \mu_b$ ):
   Reporting the difference on the probability scale gives an immediately interpretable magnitude of interaction for each bacteria.
