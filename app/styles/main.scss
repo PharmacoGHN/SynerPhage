@@ -1,0 +1,58 @@
+// This file is the entrypoint for Sass. Place your styles here or import them from other files.
+
+// Compact density. Bootstrap and bslib size text, padding and gaps in rem, so
+// scaling the root shrinks everything in proportion. A percentage (not px)
+// keeps the user's browser font-size preference in effect.
+// `html:root` outranks the `:root` rules bslib ships, whatever the load order.
+html:root {
+  --bslib-spacer: 0.75rem;
+  --bslib-sidebar-padding: 1rem;
+
+  font-size: 87.5%;
+}
+
+// The `body` prefix outranks bslib's own rules, whatever the load order.
+body {
+  .bslib-value-box .value-box-area {
+    padding: 0.6rem 1rem;
+  }
+
+  .bslib-value-box .value-box-value {
+    font-size: 1.5rem;
+  }
+
+  .value-box-title {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .accordion-button {
+    font-weight: 600;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .accordion-body {
+    padding: 0.6rem 0.9rem;
+  }
+
+  .shiny-input-container:not(.shiny-input-container-inline) {
+    margin-bottom: 0.6rem;
+  }
+
+  .form-label,
+  .control-label {
+    margin-bottom: 0.2rem;
+  }
+
+  .sidebar .form-label,
+  .sidebar label {
+    font-weight: 500;
+  }
+
+  .hint {
+    color: #6c757d;
+    font-size: 0.8rem;
+    margin-top: -0.3rem;
+  }
+}
