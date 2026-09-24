@@ -156,6 +156,7 @@ ui <- function(id) {
   ns <- shiny$NS(id)
   bslib$page_sidebar(
     title = shiny$tags$span(
+      shiny$tags$img(src = "static/SynerPhage.png", height = "32px", class = "me-2"),
       shiny$tags$strong("Phage Synergy Explorer"),
       shiny$tags$span(class = "text-muted ms-2 fs-6", "Bayesian Bliss interaction analysis")
     ),
