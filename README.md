@@ -1,10 +1,4 @@
-# Phage Synergy Explorer
-
-<p align="left">
-  <img src="docs/img/ciri.png" alt="CIRI" height="60">
-  &nbsp;&nbsp;
-  <img src="docs/img/lbbe.png" alt="LBBE" height="60">
-</p>
+# Phage Synergy Explorer <img align="right" width="190" height="60" src="https://lbbe-intra.univ-lyon1.fr/organigrammes/"> <img align="right" width="190" height="60" src="https://www.google.com/imgres?q=CIRI%20lyon&imgurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2Fv2%2FC4D0BAQGve9gjM89zjA%2Fcompany-logo_200_200%2Fcompany-logo_200_200%2F0%2F1630559066145%3Fe%3D2147483647%26v%3Dbeta%26t%3DYf9nbRYeRi6VcQFMD-c2x2Naowh3htJ1W-aBuoONcP0&imgrefurl=https%3A%2F%2Ffr.linkedin.com%2Fcompany%2Fciri-lyon&docid=DaIU5DMGRftuuM&tbnid=oLRbAXCISv3AwM&vet=12ahUKEwi2sP-c0IaXAxVq_rsIHVx9AjgQnPAOegQIOxAA..i&w=200&h=200&hcb=2&ved=2ahUKEwi2sP-c0IaXAxVq_rsIHVx9AjgQnPAOegQIOxAA">
 
 An interactive front end to a Bayesian Bliss model of phage-phage interaction.
 It takes either a single phage pair typed by hand or a full screening table, and it is deliberately agnostic about the naming, layout and size of that table.
